@@ -17,5 +17,5 @@ export const StyledLinks = styled(Link)(({ theme }) => ({
 }));
 
 export const GenreImages = styled('img')(({ theme }) => ({
-  filter: theme.palette.mode === 'dark' ? 'dark' : 'invert(1)',
+  filter: theme.palette.mode === 'dark' ? 'invert(1)' : 'dark',
 }));

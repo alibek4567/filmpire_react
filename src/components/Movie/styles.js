@@ -21,17 +21,17 @@ export const StyledLinks = styled(Link)(({ theme }) => ({
 
 export const StyledImages = styled('img')(() => ({
   borderRadius: '20px',
-  height: '300px',
+  height: '250px',
   marginBottom: '10px',
   '&:hover': {
     transform: 'scale(1.05)',
   },
 }));
 
-export const StyledTitle = styled(Typography)(({ theme }) => ({
+export const StyledTitle = styled(Typography)(() => ({
   color: '#000',
   textOverflow: 'ellipsis',
-  width: '230px',
+  width: '200px',
   whiteSpace: 'nowrap',
   overflow: 'hidden',
   marginTop: '10px',
