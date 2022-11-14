@@ -5,7 +5,7 @@ import { Menu, AccountCircle, Brightness4, Brightness7 } from '@mui/icons-materi
 import { useTheme } from '@mui/material/styles';
 
 import { StyledToolBar, StyledIconButton, StyledDrawer, StyledDrawerPaper, StyledLinkButton } from './styles';
-import { Sidebar } from '../import';
+import { Sidebar, Search } from '../import';
 
 const Navbar = () => {
   const [mobileOpen, setmobileOpen] = useState(false);
@@ -30,7 +30,7 @@ const Navbar = () => {
           <IconButton color="inherit" sx={{ ml: 1 }} onClick={() => {}}>
             {theme.palette.mode === 'dark' ? <Brightness7 /> : <Brightness4 /> }
           </IconButton>
-          {!isMobile && 'Search...' }
+          {!isMobile && <Search /> }
           <div>
             {!isAuthenticated ? (
               <Button color="inherit" onClick={() => {}}>
@@ -47,7 +47,7 @@ const Navbar = () => {
               </StyledLinkButton>
             )}
           </div>
-          {isMobile && 'Search...' }
+          {isMobile && <Search /> }
         </StyledToolBar>
       </AppBar>
       <div>
