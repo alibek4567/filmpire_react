@@ -13,8 +13,8 @@ const App = () => (
     <DivContent>
       <Toolbar />
       <Routes>
-        <Route path="/" element={<Profile />} />
-        <Route path="/movies" element={<Movies />} />
+        <Route path="/profile/:id" element={<Profile />} />
+        <Route path="/" element={<Movies />} />
         <Route path="/actors" element={<Actors />} />
       </Routes>
     </DivContent>
