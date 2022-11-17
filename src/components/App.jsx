@@ -3,7 +3,7 @@ import React from 'react';
 import { CssBaseline } from '@mui/material';
 import { Route, Routes } from 'react-router-dom';
 
-import { Movies, Profile, Navbar, Actors } from './import.js';
+import { Movies, Profile, Navbar, Actors, MovieInformation } from './import.js';
 import { DivContent, DivRoot, Toolbar } from './styles';
 
 const App = () => (
@@ -15,7 +15,8 @@ const App = () => (
       <Routes>
         <Route path="/profile/:id" element={<Profile />} />
         <Route path="/" element={<Movies />} />
-        <Route path="/actors" element={<Actors />} />
+        <Route path="/actors/:id" element={<Actors />} />
+        <Route path="/movie/:id" element={<MovieInformation />} />
       </Routes>
     </DivContent>
   </DivRoot>

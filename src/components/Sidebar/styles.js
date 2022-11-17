@@ -1,4 +1,4 @@
-import { Link } from '@mui/material';
+import { Link } from 'react-router-dom';
 import { styled } from '@mui/system';
 
 export const ImageLink = styled(Link)({
