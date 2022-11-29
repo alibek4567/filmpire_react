@@ -12,4 +12,5 @@ export const Toolbar = styled('div')({
 export const DivContent = styled('main')({
   flexGrow: 1,
   padding: '2em',
+  width: '100%',
 });

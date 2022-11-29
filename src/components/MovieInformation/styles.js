@@ -15,7 +15,8 @@ export const StyledGridSpaceAround = styled(Grid)(({ theme }) => ({
 export const StyledImage = styled('img')(({ theme }) => ({
   borderRadius: '20px',
   boxShadow: '0.5em 1em 1em rgb(64, 64, 70)',
-  width: '80%',
+  width: '85%',
+  height: '600px',
   [theme.breakpoints.down('md')]: {
     margin: '0 auto',
     width: '50%',

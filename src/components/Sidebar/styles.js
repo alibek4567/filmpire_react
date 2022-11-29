@@ -12,7 +12,7 @@ export const Image = styled('img')({
 });
 
 export const StyledLinks = styled(Link)(({ theme }) => ({
-  color: theme.palette.primary,
+  color: theme.palette.mode === 'light' ? 'black' : 'white',
   textDecoration: 'none',
 }));
 

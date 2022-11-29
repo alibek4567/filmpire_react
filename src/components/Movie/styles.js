@@ -28,8 +28,8 @@ export const StyledImages = styled('img')(() => ({
   },
 }));
 
-export const StyledTitle = styled(Typography)(() => ({
-  color: '#000',
+export const StyledTitle = styled(Typography)(({ theme }) => ({
+  color: theme.palette.mode === 'light' ? 'black' : 'white',
   textOverflow: 'ellipsis',
   width: '200px',
   whiteSpace: 'nowrap',
