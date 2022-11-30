@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { setUser, userSelector } from '../../features/auth';
-import { StyledToolBar, StyledIconButton, StyledDrawer, StyledDrawerPaper, StyledLinkButton } from './styles';
+import { StyledToolBar, StyledIconButton, StyledDrawer, StyledLinkButton } from './styles';
 import { Sidebar, Search } from '../import';
 import { fetchToken, createSessionId, moviesApi } from '../../utils';
 import { ColorModeContext } from '../../utils/ToggleColorMode';
@@ -69,7 +69,7 @@ const Navbar = () => {
                 <Avatar
                   style={{ width: 30, height: 30 }}
                   alt="Profile"
-                  src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png"
+                  src={`https://www.themoviedb.org/t/p/w64_and_h64_face${user?.avatar?.tmdb?.avatar_path}`}
                 />
               </StyledLinkButton>
             )}
@@ -85,7 +85,7 @@ const Navbar = () => {
               anchor="right"
               open={mobileOpen}
               onClose={() => setmobileOpen((prevMobileOpen) => !prevMobileOpen)}
-              classes={{ paper: StyledDrawerPaper }}
+              PaperProps={{ sx: { width: '240px' } }}
               ModalProps={{ keepMounted: true }}
             >
               <Sidebar setMobileOpen={setmobileOpen} />
@@ -93,7 +93,7 @@ const Navbar = () => {
           ) : (
             <StyledDrawer
               variant="permanent"
-              classes={{ paper: StyledDrawerPaper }}
+              PaperProps={{ sx: { width: '240px' } }}
               open
             >
               <Sidebar setMobileOpen={setmobileOpen} />

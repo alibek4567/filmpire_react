@@ -1,4 +1,4 @@
-import { IconButton, Toolbar, Drawer, Paper, Button } from '@mui/material';
+import { IconButton, Toolbar, Drawer, Button } from '@mui/material';
 import { styled } from '@mui/system';
 
 const drawerWidth = 240;
@@ -28,13 +28,9 @@ export const StyledDrawer = styled(Drawer)(({ theme }) => ({
   },
 }));
 
-export const StyledDrawerPaper = styled(Paper)({
-  width: drawerWidth,
-});
-
-export const StyledLinkButton = styled(Button)({
+export const StyledLinkButton = styled(Button)(() => ({
   '&:hover': {
     color: 'white !important',
     textDecoration: 'none',
   },
-});
+}));

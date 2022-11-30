@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Divider, List, ListItem, ListItemText, ListSubheader, ListItemIcon, Box, CircularProgress } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Image, ImageLink, StyledLinks, GenreImages } from './styles';
 
 import { useGetGenresQuery } from '../../services/TMDB';
@@ -24,10 +24,15 @@ const categories = [
 //   { label: 'Animation', value: 'animation' },
 // ];
 
-const Sidebar = () => {
+const Sidebar = ({ setMobileOpen }) => {
+  const { genreIdOrCategoryName } = useSelector((state) => state.currentGenreOrCategory);
   const theme = useTheme();
   const { data, isFetching } = useGetGenresQuery();
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [genreIdOrCategoryName]);
 
   return (
     <>
