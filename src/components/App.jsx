@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Movies, Profile, Navbar, Actors, MovieInformation } from './import.js';
 import { DivContent, DivRoot, Toolbar } from './styles';
 import useAlan from './Alan.jsx';
+import TabsProfile from './TabsProfile/TabsProfile.jsx';
 
 const App = () => {
   const alanBtnContainer = useRef();
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/approved" element={<Movies />} />
           <Route path="/actors/:id" element={<Actors />} />
           <Route path="/movie/:id" element={<MovieInformation />} />
+          <Route path="/tabs" element={<TabsProfile/>} />
         </Routes>
       </DivContent>
       <div ref={alanBtnContainer} />
